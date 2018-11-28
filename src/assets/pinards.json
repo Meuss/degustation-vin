@@ -1,0 +1,108 @@
+[
+  {
+    "id": "1",
+    "name": "Chasse-Spleen",
+    "description": "Le vin est brillant et limpide. La robe est grenat intense. Le vin est net et droit. Avant agitation : nez expressif de baies rouges et noires. Apres agitation : mûre et framboise mêlées aux caractères gourmands d’un élevage soigné et fondu. L’attaque est franche et ample. La bouche est volumineuse tramée densément par un tanin ﬁn. La ﬁnale est persistante et très fruits rouges mêlés.",
+    "cepage": "50% Cabernet Sauvignon, 42% Merlot, 5% Petit Verdot, 3% Cabernet Franc",
+    "pays": "fr",
+    "annee": "2015",
+    "img": "/images/chasse-spleen.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Barahonda barrica",
+    "description": "Lurid ruby. Ripe black and blue fruits, cola, vanilla and potpourri on the deeply perfumed nose. Smooth and sweet on entry and then tighter in the midpalate, offering bitter cherry and blueberry flavors and hints of vanilla and spicecake. A smoky nuance emerges with aeration and carries through the long, gently tannic finish, which echoes the vanilla note.",
+    "cepage": "Monastrell, Syrah",
+    "pays": "es",
+    "annee": "2013",
+    "img": "/images/barahonda.png"
+  },
+  {
+    "id": "3",
+    "name": "Le Syrah de papa Jean",
+    "name2": "Réserve de l'éleveur de reines.",
+    "description": "Robe d'un rouge intense et sombre ; nez puissant, sauvage où se mêlent des senteurs de poivre, de cassis, de cerises noires et de mûres; en bouche, on retrouve ces mêmes arômes, le vin est tannique, structuré, robuste et riche; il atteint toute sa plénitude après quelques années ; il devient alors élégant, capiteux, velouté et puissant.",
+    "cepage": "Syrah",
+    "pays": "ch",
+    "canton": "VS",
+    "annee": "2016",
+    "img": "/images/reserve_eleveur.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Château le Rosey",
+    "name2": "Garanoir Barrique",
+    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
+    "cepage": "Gamay, Reichensteiner",
+    "pays": "ch",
+    "canton": "VD",
+    "annee": "2016",
+    "img": "/images/garanoir.png"
+  },
+  {
+    "id": "5",
+    "name": "Château le Rosey",
+    "name2": "Garanoir Barrique",
+    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
+    "cepage": "Gamay, Reichensteiner",
+    "pays": "ch",
+    "canton": "VD",
+    "annee": "2016",
+    "img": "/images/garanoir.png"
+  },
+  {
+    "id": "6",
+    "name": "Château le Rosey",
+    "name2": "Garanoir Barrique",
+    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
+    "cepage": "Gamay, Reichensteiner",
+    "pays": "ch",
+    "canton": "VD",
+    "annee": "2016",
+    "img": "/images/garanoir.png"
+  },
+  {
+    "id": "7",
+    "name": "Château le Rosey",
+    "name2": "Garanoir Barrique",
+    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
+    "cepage": "Gamay, Reichensteiner",
+    "pays": "ch",
+    "canton": "VD",
+    "annee": "2016",
+    "img": "/images/garanoir.png"
+  },
+  {
+    "id": "8",
+    "name": "Château le Rosey",
+    "name2": "Garanoir Barrique",
+    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
+    "cepage": "Gamay, Reichensteiner",
+    "pays": "ch",
+    "canton": "VD",
+    "annee": "2016",
+    "img": "/images/garanoir.png"
+  },
+  {
+    "id": "9",
+    "name": "Château le Rosey",
+    "name2": "Garanoir Barrique",
+    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
+    "cepage": "Gamay, Reichensteiner",
+    "pays": "ch",
+    "canton": "VD",
+    "annee": "2016",
+    "img": "/images/garanoir.png"
+  },
+  {
+    "id": "10",
+    "name": "Château le Rosey",
+    "name2": "Garanoir Barrique",
+    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
+    "cepage": "Gamay, Reichensteiner",
+    "pays": "ch",
+    "canton": "VD",
+    "annee": "2016",
+    "img": "/images/garanoir.png"
+  }
+]
