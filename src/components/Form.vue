@@ -2,19 +2,19 @@
   <div class="container">
     <div class="row">
       <div v-if="!submitted" class="col s12">
-        <h4 class="left-align">Tes choix</h4>
+        <!-- <h4 class="left-align">Tes choix</h4> -->
         <form @submit.prevent="validateForm">
           <div class="row">
-            <div class="input-field col s8">
+            <div class="input-field col s8 nom_joueur">
               <input
-                id="last_name"
+                id="joueur"
                 type="text"
                 class="validate"
                 maxlength="30"
                 :value="joueur"
                 v-on:keyup.stop="updateField('joueur', $event.target.value)"
               >
-              <label for="last_name" :class="{active: joueur!= ''}">Donne ton pseudo nigga</label>
+              <label for="joueur" :class="{active: joueur!= ''}">Donne ton pseudo nigga</label>
             </div>
             <div class="row">
               <div v-for="index in 7" :key="index" class="col s12">
@@ -26,13 +26,12 @@
                     class="browser-default"
                     @change="updateField(`vin${index}`, $event.target.value)"
                   >
-                    <option value :selected="`vin${index}` === ''"></option>
+                    <option value :selected="getVin(index) === ''"></option>
                     <option
-                      v-for="(pinard, index) of pinards"
-                      :key="index"
+                      v-for="(pinard, indexPinard) of pinards"
+                      :key="indexPinard"
                       :value="pinard.name"
-                      :selected="vin1 === pinard.name"
-                      :data-test="[`vin${index}`]"
+                      :selected="getVin(index) === pinard.name"
                     >{{pinard.name}}</option>
                   </select>
                 </div>
@@ -63,7 +62,7 @@
           <i>« {{randomQuote}} »</i>
         </div>
         <div class="citationname right-align">
-          <strong>&nbsp;– {{joueur}}</strong>, oenologue
+          <strong>&nbsp;– {{joueur}}</strong>, oenologue padawan
         </div>
         <hr>
         <br>
@@ -106,9 +105,6 @@ export default {
       ],
     };
   },
-  mounted() {
-    console.log('mounted');
-  },
   methods: {
     updateField(field, value) {
       this.invalid = false;
@@ -150,11 +146,22 @@ export default {
       // const show = Math.random() - 0.5;
       const taunts = [
         "Putain mais t'es mauvais!",
+        'Copie pas sur Boris, il capte ked 😂',
+        'Dis-voir à Badoux de se la fermer un peu',
+        "C'est pas ce que Constantin a choisi",
+        "T'as pas été en Bourgogne toi?",
+        '🤓 Master 🤓',
+        "T'es sûr? Après tlm voit ta réponse si jms",
+        "Moi j'aurai mis le Cornalin",
         "et mon cul c'est du poulet?",
         'Nul à chier 💩💩💩',
         'mets pas des trucs au bol!',
+        '🤓 Master 🤓',
+        "Copie pas sur Richy, c'est pas du cubis!",
         'oenologue mon cul!',
         'tu connais rien au 🍷',
+        '🤓 Master 🤓',
+        "C'est pas le Chasse-Spleen?",
         "du chasselas pendant que t'y es?",
         '... et ça se dit soiffard!',
         'retourne boire de la suze',
@@ -164,9 +171,10 @@ export default {
         'touriste!',
         'vivement la VP...',
         "ouai en fait t'en as aucune idée",
-        "Attention, celui-là c'est un piège!",
+        "Attention, celui-là c'est un piège! 👺",
         '👉🏼🚪',
-        "❌❌❌ C'est faux!",
+        '🥴🥴🥴',
+        '🤦‍♀️🤦‍♂️',
         'beurré!',
       ];
       const selectedTaunt = taunts[Math.floor(Math.random() * taunts.length)];
@@ -179,6 +187,9 @@ export default {
     },
     randomQuote() {
       return this.quotes[Math.floor(Math.random() * this.quotes.length)];
+    },
+    getVin() {
+      return index => store.state.form['vin' + index];
     },
     joueur() {
       return store.state.form.joueur;

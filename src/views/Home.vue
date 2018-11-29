@@ -1,13 +1,27 @@
 <template>
-  <div class="home">
-    <h4>Bienvenue chers oenologues!</h4>
-    <img src="/office.gif" alt>
+  <div class="home container">
+    <div class="row">
+      <div class="col s12">
+        <h4>Bienvenue,
+          <br>oenologue!
+        </h4>
+        <div class="row">
+          <div class="col s12">
+            <img src="/office.gif" alt>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'home',
+  data() {
+    return {};
+  },
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>

@@ -2,20 +2,22 @@
   {
     "id": "1",
     "name": "Chasse-Spleen",
+    "name2": "Bordeaux",
     "description": "Le vin est brillant et limpide. La robe est grenat intense. Le vin est net et droit. Avant agitation : nez expressif de baies rouges et noires. Apres agitation : mûre et framboise mêlées aux caractères gourmands d’un élevage soigné et fondu. L’attaque est franche et ample. La bouche est volumineuse tramée densément par un tanin ﬁn. La ﬁnale est persistante et très fruits rouges mêlés.",
     "cepage": "50% Cabernet Sauvignon, 42% Merlot, 5% Petit Verdot, 3% Cabernet Franc",
     "pays": "fr",
     "annee": "2015",
-    "img": "/images/chasse-spleen.jpg"
+    "img": "/images/chasse-spleen.png"
   },
   {
     "id": "2",
-    "name": "Barahonda barrica",
+    "name": "Barahonda",
+    "name2": "barrica",
     "description": "Lurid ruby. Ripe black and blue fruits, cola, vanilla and potpourri on the deeply perfumed nose. Smooth and sweet on entry and then tighter in the midpalate, offering bitter cherry and blueberry flavors and hints of vanilla and spicecake. A smoky nuance emerges with aeration and carries through the long, gently tannic finish, which echoes the vanilla note.",
     "cepage": "Monastrell, Syrah",
     "pays": "es",
     "annee": "2013",
-    "img": "/images/barahonda.png"
+    "img": "/images/barahonda.jpg"
   },
   {
     "id": "3",
@@ -30,14 +32,14 @@
   },
   {
     "id": "4",
-    "name": "Château le Rosey",
-    "name2": "Garanoir Barrique",
-    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
-    "cepage": "Gamay, Reichensteiner",
-    "pays": "ch",
-    "canton": "VD",
-    "annee": "2016",
-    "img": "/images/garanoir.png"
+    "name": "Domaine du Bouscat",
+    "name2": "Bordeaux - Cuvée la Gargone",
+    "description": "Robe sombre, arômes puissants enrobés de chocolat mûr, de baies rouges sucrés, avec beaucoup de texture et de personnalité",
+    "cepage": "60% Merlot, 20% Malbec, 18% Cabernet-Franc, 2% Cabernet-Sauvignon",
+    "pays": "fr",
+    "canton": "",
+    "annee": "2012",
+    "img": "/images/bouscat.jpg"
   },
   {
     "id": "5",
@@ -52,57 +54,68 @@
   },
   {
     "id": "6",
-    "name": "Château le Rosey",
-    "name2": "Garanoir Barrique",
-    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
-    "cepage": "Gamay, Reichensteiner",
-    "pays": "ch",
-    "canton": "VD",
-    "annee": "2016",
-    "img": "/images/garanoir.png"
+    "name": "Château Haut-Ballet",
+    "name2": "Bordeaux - Fronsac",
+    "description": "Belle robe sombre, des parfums intenses et délicats avec un boisé remarquablement épicé. La bouche est soyeuse mais structurée, les tannins se prolongent sur des notes de sous-bois, de cèdre et de fruits. Toute la grandeur du merlot est ici représentée.",
+    "cepage": "Merlot",
+    "pays": "fr",
+    "canton": "",
+    "annee": "2011",
+    "img": "/images/haut-ballet.jpg"
   },
   {
     "id": "7",
-    "name": "Château le Rosey",
-    "name2": "Garanoir Barrique",
-    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
-    "cepage": "Gamay, Reichensteiner",
+    "name": "Cornalin de Fully",
+    "name2": "Cave des Amandiers",
+    "description": "Un cépage qui donne un vin coloré (encre de chine) aux tanins harmonieux et qui conserve toujours une belle acidité. Il a au nez, comme en bouche, un coté griottes, kirsch, mais aussi fumé, « charbonné ». Il est reconnaissable entre tous et supporte très bien l’élevage en barrique.",
+    "cepage": "Cornalin",
     "pays": "ch",
-    "canton": "VD",
-    "annee": "2016",
-    "img": "/images/garanoir.png"
+    "canton": "VS",
+    "annee": "2015",
+    "img": "/images/cornalin.jpg"
   },
   {
     "id": "8",
-    "name": "Château le Rosey",
-    "name2": "Garanoir Barrique",
-    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
-    "cepage": "Gamay, Reichensteiner",
+    "name": "Viti Merlot del Ticino",
+    "name2": "Cantina Sociale Mendrisio",
+    "description": "Robe pourpre. Nez de cerises et d'herbes. Bouche pleine et corsée, aux tanins moelleux.",
+    "cepage": "Merlot",
     "pays": "ch",
-    "canton": "VD",
+    "canton": "TI",
     "annee": "2016",
-    "img": "/images/garanoir.png"
+    "img": "/images/ticino.png"
   },
   {
     "id": "9",
-    "name": "Château le Rosey",
-    "name2": "Garanoir Barrique",
-    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
-    "cepage": "Gamay, Reichensteiner",
-    "pays": "ch",
-    "canton": "VD",
-    "annee": "2016",
-    "img": "/images/garanoir.png"
+    "name": "Marsannay - Les Longeroies",
+    "name2": "Bourgogne",
+    "description": "Il se caractérise par un bouquet puissant de pruneaux et de mures et évoluera avec le temps vers des notes de fruits secs et de vanille. Le bois est remarquablement fondu. La bouche est souple et les tannins bien intégrés. Sa chair en fait un vin très gourmand.",
+    "cepage": "Pinot noir",
+    "pays": "fr",
+    "canton": "",
+    "annee": "2014",
+    "img": "/images/marsannay.jpg"
   },
   {
     "id": "10",
-    "name": "Château le Rosey",
-    "name2": "Garanoir Barrique",
-    "description": "Outre sa richesse en extrait, il arbore une robe rubis et l’on décèle des notes de prune mûre, de figues et une finale en réglisse et cacao. Il se montre plus puissant, plus massif et plus opulent par un passage en fûts de chêne tout en possédant des tannins souples et onctueux qui exalteront votre palais par sa longueur en bouche.",
-    "cepage": "Gamay, Reichensteiner",
-    "pays": "ch",
-    "canton": "VD",
-    "annee": "2016",
-    "img": "/images/garanoir.png"
+    "name": "Amarone della Valpolicella",
+    "name2": "Borelli",
+    "description": "Robe grenat aux nuances brunes d'évolution, le nez offre des beaux arômes de fruits noirs, des notes d'épices douces et de fines touches végétales. La bouche est ronde, marquée par la générosité, de beaux tanins bien fondus à d'agréables saveurs fruitées et douces.",
+    "cepage": "Corvina, Rondinella, Molinara",
+    "pays": "it",
+    "canton": "",
+    "annee": "2015",
+    "img": "/images/amarone.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Pommard",
+    "name2": "Domaine Decelle-Villa",
+    "description": "Le pommard prend avec le temps des notes de cuir, de musc, de poivre et de chocolat. En bouche, la texture est ronde, la structure délicate et affirmée. Un vin imposant, mais élégant et parfaitement bien dessiné!",
+    "cepage": "Pinot noir",
+    "pays": "fr",
+    "canton": "",
+    "annee": "2013",
+    "img": "/images/pommard.jpg"
   }
 ]
