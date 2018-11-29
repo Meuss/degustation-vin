@@ -7,18 +7,25 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     pinards,
+    form: {
+      joueur: '',
+      vin1: '',
+      vin2: '',
+      vin3: '',
+      vin4: '',
+      vin5: '',
+      vin6: '',
+      vin7: '',
+    },
+    submitted: false,
   },
-  mutations: {},
+  mutations: {
+    updateForm(state, form) {
+      Object.assign(state.form, form);
+    },
+    submitted(state, payload) {
+      this.state.submitted = payload;
+    },
+  },
   actions: {},
-  // getters: {
-  //   pinards: state => {
-  //     const newOrder = state.orderedPinards.slice();
-  //     /* eslint-disable-next-line */
-  //     return newOrder.sort(randomize);
-  //   },
-  // },
 });
-
-// function randomize() {
-//   return Math.random() - 0.5;
-// }

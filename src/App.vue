@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <router-link to="/">Home</router-link> | -->
-      <router-link to="/liste">Liste</router-link> |
-      <router-link to="/choisir">Choisir</router-link>
+      <router-link to="/">Home</router-link>
+      <span>|</span>
+      <router-link to="/liste">Liste</router-link>
+      <span>|</span>
+      <router-link to="/choisir">Choix</router-link>
     </div>
     <router-view/>
   </div>
@@ -28,5 +30,11 @@
       color: #42b983;
     }
   }
+  span {
+    margin: 0 10px;
+  }
+}
+.toasted.bubble {
+  background-color: #ef5350 !important;
 }
 </style>

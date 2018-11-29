@@ -1,23 +1,28 @@
 <template>
   <div class="home">
-    <Home msg="Dégustation!"/>
+    <h4>Bienvenue chers oenologues!</h4>
+    <img src="/office.gif" alt>
   </div>
 </template>
 
 <script>
-import Home from '@/components/Home.vue';
-
 export default {
   name: 'home',
-  components: {
-    Home,
-  },
 };
 </script>
-<style lang="scss">
-.home {
-  img {
-    // height: 200px;
-  }
+<style lang="scss" scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #4db6ac;
 }
 </style>

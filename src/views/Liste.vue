@@ -1,6 +1,6 @@
 <template>
   <div class="liste container">
-    <h3>Liste</h3>
+    <h4 class="left-align">Liste</h4>
     <ul>
       <li v-for="(pinard, index) of pinards" :key="index">
         <div class="card">
@@ -10,15 +10,21 @@
             </div>
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4"><strong>{{pinard.name}}</strong><i class="material-icons right">info_outline</i></span>
+            <span class="card-title activator grey-text text-darken-4">
+              <strong>{{pinard.name}}</strong>
+              <i class="material-icons right">info_outline</i>
+            </span>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4"><strong>{{pinard.name}}</strong><i class="material-icons right">close</i></span>
+            <span class="card-title grey-text text-darken-4">
+              <strong>{{pinard.name}}</strong>
+              <i class="material-icons right">close</i>
+            </span>
             <div class="details">
               <h6 v-if="pinard.name2">{{pinard.name2}}</h6>
               <h5>{{pinard.cepage}}</h5>
               <div class="country-wrap">
-                <img class="flag" :src="`/flags/${pinard.pays}.svg`" alt="">
+                <img class="flag" :src="`/flags/${pinard.pays}.svg`" alt>
                 <span class="canton" v-if="pinard.canton">{{pinard.canton}}</span>
               </div>
               <h6>{{pinard.annee}}</h6>
@@ -45,6 +51,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.liste .card {
+  min-height: 350px;
+}
+.liste .card-image {
+  // display: none;
+}
 .liste .image-vin {
   height: 250px;
   display: inline-block;

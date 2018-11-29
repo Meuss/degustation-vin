@@ -1,8 +1,8 @@
 <template>
   <div class="resultat container">
     <div class="row">
-      <div class="col s12">
-        <h3>Résultats</h3>
+      <div class="col s10">
+        <h3 class="left-align">Résultats</h3>
         <tabs
           :tabs="tabs"
           :currentTab="currentTab"
@@ -14,41 +14,67 @@
         />
         <div class="content left-align">
           <div v-if="currentTab === 'tab1'">
-            <div v-for="joueur in joueurs" :key="joueur.id">
-              <p><strong>{{joueur.nom}}: </strong>{{joueur.vin1}}</p>
-            </div>
+            <ul>
+              <div v-for="joueur in joueurs" :key="joueur.id">
+                <li>
+                  <strong>{{joueur.nom}}:</strong>
+                  <span>{{joueur.vin1}}</span>
+                </li>
+              </div>
+            </ul>
           </div>
           <div v-if="currentTab === 'tab2'">
             <div v-for="joueur in joueurs" :key="joueur.id">
-              <p><strong>{{joueur.nom}}: </strong>{{joueur.vin2}}</p>
+              <p>
+                <strong>{{joueur.nom}}:</strong>
+                {{joueur.vin2}}
+              </p>
             </div>
           </div>
           <div v-if="currentTab === 'tab3'">
             <div v-for="joueur in joueurs" :key="joueur.id">
-              <p><strong>{{joueur.nom}}: </strong>{{joueur.vin3}}</p>
+              <p>
+                <strong>{{joueur.nom}}:</strong>
+                {{joueur.vin3}}
+              </p>
             </div>
           </div>
           <div v-if="currentTab === 'tab4'">
             <div v-for="joueur in joueurs" :key="joueur.id">
-              <p><strong>{{joueur.nom}}: </strong>{{joueur.vin4}}</p>
+              <p>
+                <strong>{{joueur.nom}}:</strong>
+                {{joueur.vin4}}
+              </p>
             </div>
           </div>
           <div v-if="currentTab === 'tab5'">
             <div v-for="joueur in joueurs" :key="joueur.id">
-              <p><strong>{{joueur.nom}}: </strong>{{joueur.vin5}}</p>
+              <p>
+                <strong>{{joueur.nom}}:</strong>
+                {{joueur.vin5}}
+              </p>
             </div>
           </div>
           <div v-if="currentTab === 'tab6'">
             <div v-for="joueur in joueurs" :key="joueur.id">
-              <p><strong>{{joueur.nom}}: </strong>{{joueur.vin6}}</p>
+              <p>
+                <strong>{{joueur.nom}}:</strong>
+                {{joueur.vin6}}
+              </p>
             </div>
           </div>
           <div v-if="currentTab === 'tab7'">
             <div v-for="joueur in joueurs" :key="joueur.id">
-              <p><strong>{{joueur.nom}}: </strong>{{joueur.vin7}}</p>
+              <p>
+                <strong>{{joueur.nom}}:</strong>
+                {{joueur.vin7}}
+              </p>
             </div>
           </div>
         </div>
+      </div>
+      <div class="col s2">
+        <img src="/redwine.png">
       </div>
     </div>
   </div>
@@ -115,21 +141,30 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.resultat .content ul {
+  margin-top: 50px;
+  li strong {
+    width: 30%;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
 .tabs {
   position: relative;
   margin: 0 auto;
-
+  display: flex;
   &__active-line {
     position: absolute;
     bottom: 0;
     left: 0;
     height: 2px;
-    background-color: black;
+    background-color: red;
     transition: transform 0.4s ease, width 0.4s ease;
   }
 
   &__item {
+    flex: 1;
     display: inline-block;
     margin: 0 5px;
     padding: 10px;
@@ -149,11 +184,12 @@ export default {
     }
 
     &:hover {
-      border-bottom: 2px solid gray;
+      // border-bottom: 2px solid gray;
       color: black;
     }
 
     &:focus {
+      background-color: transparent;
       outline: none;
       border-bottom: 2px solid gray;
       color: black;
