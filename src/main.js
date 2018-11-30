@@ -8,11 +8,11 @@ import VueScrollReveal from 'vue-scroll-reveal';
 Vue.use(Toasted, { duration: 2000, position: 'bottom-right', theme: 'bubble' });
 Vue.use(VueScrollReveal, {
   // https://github.com/scrollreveal/scrollreveal/wiki/Getting-Started-(v3.x)
-  duration: 2000,
+  duration: 1000,
   easing: 'cubic-bezier(0.2, 0.94, 0.11, 1)',
   scale: 1,
   opacity: 0.1,
-  distance: '200px',
+  distance: '60px',
   viewFactor: 0.2,
 });
 

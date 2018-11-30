@@ -1,5 +1,5 @@
 <template>
-  <div class="choisir">
+  <div class="choisir container">
     <keep-alive>
       <Form/>
     </keep-alive>

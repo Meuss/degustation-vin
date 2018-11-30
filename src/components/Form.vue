@@ -1,8 +1,7 @@
 <template>
-  <div class="container">
+  <div>
     <div class="row">
       <div v-if="!submitted" class="col s12">
-        <!-- <h4 class="left-align">Tes choix</h4> -->
         <form @submit.prevent="validateForm">
           <div class="row">
             <div class="input-field col s8 nom_joueur">
@@ -17,15 +16,12 @@
               <label for="joueur" :class="{active: joueur!= ''}">Donne ton pseudo nigga</label>
             </div>
             <div class="row">
-              <div v-for="index in 7" :key="index" class="col s12">
+              <div v-for="index in 8" :key="index" class="col s12">
                 <div class="valign-wrapper col s1">
                   <h5 class="left-align">{{index}}.</h5>
                 </div>
                 <div class="input-field col s11">
-                  <select
-                    class="browser-default"
-                    @change="updateField(`vin${index}`, $event.target.value)"
-                  >
+                  <select @change="updateField(`vin${index}`, $event.target.value)">
                     <option value :selected="getVin(index) === ''"></option>
                     <option
                       v-for="(pinard, indexPinard) of pinards"
@@ -38,11 +34,6 @@
               </div>
             </div>
             <div class="row">
-              <div class="invalid red col s12 white-text" v-if="invalid">
-                <h6>Le formulaire n'est pas complet.
-                  <br>Putain mais arrête de boire!
-                </h6>
-              </div>
               <button
                 class="btn waves-effect waves-light btn-large"
                 :class="{disabled: submitted}"
@@ -57,7 +48,7 @@
         </form>
       </div>
       <div v-else class="col s12 left-align">
-        <img class="expert" src="expert.jpg" alt>
+        <img class="expert" :src="randomexpert" alt>
         <div class="citation">
           <i>« {{randomQuote}} »</i>
         </div>
@@ -75,6 +66,7 @@
           <li>5. {{vin5}}</li>
           <li>6. {{vin6}}</li>
           <li>7. {{vin7}}</li>
+          <li>8. {{vin8}}</li>
         </ul>
       </div>
     </div>
@@ -88,7 +80,6 @@ export default {
   name: 'Form',
   data() {
     return {
-      invalid: false,
       quotes: [
         'Je viens de sauver du vin. Il était piégé dans une bouteille!',
         'Il faut manger comme un homme en bonne santé et boire comme un malade.',
@@ -107,7 +98,6 @@ export default {
   },
   methods: {
     updateField(field, value) {
-      this.invalid = false;
       store.commit('updateForm', {
         [field]: value,
       });
@@ -117,33 +107,37 @@ export default {
     },
     /* eslint-disable-next-line */
     validateForm: function(e) {
-      if (this.joueur != '' && this.vin1 != '' && this.vin2 != '' && this.vin3 != '' && this.vin4 != '' && this.vin5 != '' && this.vin6 != '' && this.vin7 != '' && !this.submitted) {
-        console.log('✅✅✅✅');
-        this.invalid = false;
+      if (
+        this.joueur != '' &&
+        this.vin1 != '' &&
+        this.vin2 != '' &&
+        this.vin3 != '' &&
+        this.vin4 != '' &&
+        this.vin5 != '' &&
+        this.vin6 != '' &&
+        this.vin7 != '' &&
+        this.vin8 != '' &&
+        !this.submitted
+      ) {
         // send to firebase
-        db.collection('joueur')
-          .add({
-            joueur: this.joueur,
-            vin1: this.vin1,
-            vin2: this.vin2,
-            vin3: this.vin3,
-            vin4: this.vin4,
-            vin5: this.vin5,
-            vin6: this.vin6,
-            vin7: this.vin7,
-          })
-          .catch(err => {
-            console.log(err);
-          });
+        db.collection('joueur').add({
+          joueur: this.joueur,
+          vin1: this.vin1,
+          vin2: this.vin2,
+          vin3: this.vin3,
+          vin4: this.vin4,
+          vin5: this.vin5,
+          vin6: this.vin6,
+          vin7: this.vin7,
+          vin8: this.vin8,
+        });
         // commit to store
         store.commit('submitted', true);
       } else {
-        this.invalid = true;
-        console.log('👺👺👺👺');
+        this.$toasted.show('Formulaire incomplet! Arrête de boire!', { type: 'error', icon: 'warning', position: 'top-center', fullWidth: true });
       }
     },
     showTaunt() {
-      // const show = Math.random() - 0.5;
       const taunts = [
         "Putain mais t'es mauvais!",
         'Copie pas sur Boris, il capte ked 😂',
@@ -173,7 +167,6 @@ export default {
         "ouai en fait t'en as aucune idée",
         "Attention, celui-là c'est un piège! 👺",
         '👉🏼🚪',
-        '🥴🥴🥴',
         '🤦‍♀️🤦‍♂️',
         'beurré!',
       ];
@@ -181,7 +174,14 @@ export default {
       this.$toasted.show(selectedTaunt);
     },
   },
+  mounted() {
+    var elems = document.querySelectorAll('select');
+    window.M.FormSelect.init(elems);
+  },
   computed: {
+    randomexpert() {
+      return `expert-${Math.floor(Math.random() * 7) + 1}.jpg`;
+    },
     pinards() {
       return store.state.pinards;
     },
@@ -215,6 +215,9 @@ export default {
     vin7() {
       return store.state.form.vin7;
     },
+    vin8() {
+      return store.state.form.vin8;
+    },
     submitted() {
       return store.state.submitted;
     },
@@ -225,9 +228,6 @@ export default {
 <style lang="scss" scoped>
 .valign-wrapper h5 {
   margin-top: 24px;
-}
-.invalid {
-  margin-bottom: 30px;
 }
 .expert {
   max-width: 100%;

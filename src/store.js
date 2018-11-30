@@ -18,8 +18,8 @@ export default new Vuex.Store({
       vin7: '',
       vin8: '',
     },
-    vraie: {
-      vin1: 'Marsannay - Les Longeroies',
+    vrais: {
+      vin1: 'Marsannay',
       vin2: 'Chasse-Spleen',
       vin3: 'Château le Rosey',
       vin4: 'Château Haut-Ballet',

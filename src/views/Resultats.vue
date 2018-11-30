@@ -1,7 +1,7 @@
 <template>
   <div class="resultat container">
     <div class="row">
-      <div class="col s10">
+      <div class="col s12">
         <h3 class="left-align">Résultats</h3>
         <tabs
           :tabs="tabs"
@@ -17,86 +17,147 @@
             <ul>
               <div v-for="joueur in joueurs" :key="joueur.id">
                 <li>
-                  <strong>{{joueur.nom}}:</strong>
+                  <button class="btn" disabled>{{joueur.nom}}</button>
                   <span>{{joueur.vin1}}</span>
                 </li>
               </div>
             </ul>
           </div>
           <div v-if="currentTab === 'tab2'">
-            <div v-for="joueur in joueurs" :key="joueur.id">
-              <p>
-                <strong>{{joueur.nom}}:</strong>
-                {{joueur.vin2}}
-              </p>
-            </div>
+            <ul>
+              <div v-for="joueur in joueurs" :key="joueur.id">
+                <li>
+                  <button class="btn" disabled>{{joueur.nom}}</button>
+                  <span>{{joueur.vin2}}</span>
+                </li>
+              </div>
+            </ul>
           </div>
           <div v-if="currentTab === 'tab3'">
-            <div v-for="joueur in joueurs" :key="joueur.id">
-              <p>
-                <strong>{{joueur.nom}}:</strong>
-                {{joueur.vin3}}
-              </p>
-            </div>
+            <ul>
+              <div v-for="joueur in joueurs" :key="joueur.id">
+                <li>
+                  <button class="btn" disabled>{{joueur.nom}}</button>
+                  <span>{{joueur.vin3}}</span>
+                </li>
+              </div>
+            </ul>
           </div>
           <div v-if="currentTab === 'tab4'">
-            <div v-for="joueur in joueurs" :key="joueur.id">
-              <p>
-                <strong>{{joueur.nom}}:</strong>
-                {{joueur.vin4}}
-              </p>
-            </div>
+            <ul>
+              <div v-for="joueur in joueurs" :key="joueur.id">
+                <li>
+                  <button class="btn" disabled>{{joueur.nom}}</button>
+                  <span>{{joueur.vin4}}</span>
+                </li>
+              </div>
+            </ul>
           </div>
           <div v-if="currentTab === 'tab5'">
-            <div v-for="joueur in joueurs" :key="joueur.id">
-              <p>
-                <strong>{{joueur.nom}}:</strong>
-                {{joueur.vin5}}
-              </p>
-            </div>
+            <ul>
+              <div v-for="joueur in joueurs" :key="joueur.id">
+                <li>
+                  <button class="btn" disabled>{{joueur.nom}}</button>
+                  <span>{{joueur.vin5}}</span>
+                </li>
+              </div>
+            </ul>
           </div>
           <div v-if="currentTab === 'tab6'">
-            <div v-for="joueur in joueurs" :key="joueur.id">
-              <p>
-                <strong>{{joueur.nom}}:</strong>
-                {{joueur.vin6}}
-              </p>
-            </div>
+            <ul>
+              <div v-for="joueur in joueurs" :key="joueur.id">
+                <li>
+                  <button class="btn" disabled>{{joueur.nom}}</button>
+                  <span>{{joueur.vin6}}</span>
+                </li>
+              </div>
+            </ul>
           </div>
           <div v-if="currentTab === 'tab7'">
-            <div v-for="joueur in joueurs" :key="joueur.id">
-              <p>
-                <strong>{{joueur.nom}}:</strong>
-                {{joueur.vin7}}
-              </p>
-            </div>
+            <ul>
+              <div v-for="joueur in joueurs" :key="joueur.id">
+                <li>
+                  <button class="btn" disabled>{{joueur.nom}}</button>
+                  <span>{{joueur.vin7}}</span>
+                </li>
+              </div>
+            </ul>
+          </div>
+          <div v-if="currentTab === 'tab8'">
+            <ul>
+              <div v-for="joueur in joueurs" :key="joueur.id">
+                <li>
+                  <button class="btn" disabled>{{joueur.nom}}</button>
+                  <span>{{joueur.vin8}}</span>
+                </li>
+              </div>
+            </ul>
           </div>
         </div>
-      </div>
-      <div class="col s2">
-        <img src="/redwine.png">
+        <div class="bg"></div>
       </div>
     </div>
+    <div class="row right-align">
+      <div class="col s12">
+        <button class="waves-effect waves-light btn-large red accent-3" @click="openScores()">
+          <i class="material-icons left">equalizer</i>Scores finaux
+          <i class="material-icons right">equalizer</i>
+        </button>
+      </div>
+    </div>
+    <sweet-modal ref="modal">
+      <ul class="collection">
+        <li
+          v-for="(player, index) in points"
+          :key="index"
+          class="row player-results collection-item"
+        >
+          <div v-if="player[1] != 0" class="number red lighten-3 white-text">
+            <div class="inner-number">
+              {{player[1]}}
+              <span>pts</span>
+            </div>
+          </div>
+          <div v-else class="number white-text">
+            <div class="inner-number">💩</div>
+          </div>
+
+          <div class="col s2"></div>
+          <div class="col s5 left-align">
+            <h6>{{player[0]}}</h6>
+          </div>
+          <div v-if="player[1] != 0 " class="col s5 left-align">
+            <div
+              v-for="(correctWine, correctindex) in player[2]"
+              :key="correctindex"
+              class="left-align correctwines"
+            >
+              <i class="material-icons">check</i>
+              {{correctWine}}
+            </div>
+          </div>
+          <div v-else class="col s5 left-align">
+            <div class="left-align correctwines">
+              <i class="material-icons">more_horiz</i>
+              Joli!
+            </div>
+          </div>
+        </li>
+      </ul>
+    </sweet-modal>
   </div>
 </template>
 <script>
 import Tabs from 'vue-tabs-with-active-line';
 import db from '@/firebase/init';
+import store from '@/store';
+import { SweetModal } from 'sweet-modal-vue';
 
 export default {
   name: 'Resultats',
   data() {
     return {
       joueurs: [],
-      vrai: {
-        vin1: 'Chasse-Spleen',
-        vin2: 'Château le Rosey',
-        vin3: 'Château le Rosey',
-        vin4: 'Château le Rosey',
-        vin5: 'Château le Rosey',
-        vin6: 'Château le Rosey',
-        vin7: 'Château le Rosey',
-      },
       tabs: [
         { title: 'Vin 1', value: 'tab1' },
         { title: 'Vin 2', value: 'tab2' },
@@ -105,6 +166,7 @@ export default {
         { title: 'Vin 5', value: 'tab5' },
         { title: 'Vin 6', value: 'tab6' },
         { title: 'Vin 7', value: 'tab7' },
+        { title: 'Vin 8', value: 'tab8' },
       ],
       currentTab: 'tab1',
     };
@@ -125,6 +187,7 @@ export default {
             vin5: doc.data().vin5,
             vin6: doc.data().vin6,
             vin7: doc.data().vin7,
+            vin8: doc.data().vin8,
           });
         }
       });
@@ -134,9 +197,64 @@ export default {
     handleClick(newTab) {
       this.currentTab = newTab;
     },
+    openScores() {
+      this.$refs.modal.open();
+    },
+    comparator(a, b) {
+      if (a[1] < b[1]) return 1;
+      if (a[1] > b[1]) return -1;
+      return 0;
+    },
+  },
+  computed: {
+    points() {
+      const points = [];
+      this.joueurs.forEach(player => {
+        player.score = 0;
+        player.correct = [];
+        if (player.vin1 === this.vrais.vin1) {
+          player.score += 1;
+          player.correct.push(this.vrais.vin1);
+        }
+        if (player.vin2 === this.vrais.vin2) {
+          player.score += 1;
+          player.correct.push(this.vrais.vin2);
+        }
+        if (player.vin3 === this.vrais.vin3) {
+          player.score += 1;
+          player.correct.push(this.vrais.vin3);
+        }
+        if (player.vin4 === this.vrais.vin4) {
+          player.score += 1;
+          player.correct.push(this.vrais.vin4);
+        }
+        if (player.vin5 === this.vrais.vin5) {
+          player.score += 1;
+          player.correct.push(this.vrais.vin5);
+        }
+        if (player.vin6 === this.vrais.vin6) {
+          player.score += 1;
+          player.correct.push(this.vrais.vin6);
+        }
+        if (player.vin7 === this.vrais.vin7) {
+          player.score += 1;
+          player.correct.push(this.vrais.vin7);
+        }
+        if (player.vin8 === this.vrais.vin8) {
+          player.score += 1;
+          player.correct.push(this.vrais.vin8);
+        }
+        points.push([player.nom, player.score, player.correct]);
+      });
+      return points.sort(this.comparator);
+    },
+    vrais() {
+      return store.state.vrais;
+    },
   },
   components: {
     Tabs,
+    SweetModal,
   },
 };
 </script>
@@ -144,10 +262,16 @@ export default {
 <style lang="scss">
 .resultat .content ul {
   margin-top: 50px;
-  li strong {
-    width: 30%;
-    display: inline-block;
+  li {
     margin-bottom: 5px;
+    .btn {
+      margin-right: 30px;
+      padding: 7px 0px;
+      height: auto;
+      line-height: 18px;
+      color: #333 !important;
+      width: 30%;
+    }
   }
 }
 .tabs {
@@ -201,6 +325,45 @@ export default {
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+  .tabs__active-line {
+    background-color: #26a69a !important;
+  }
+}
+.bg {
+  background-image: url('/redwine.png');
+  background-size: cover;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 500px;
+  width: 500px;
+}
+.player-results {
+  position: relative;
+  .number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-family: 'Sedgwick Ave', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    span {
+      font-size: 16px;
+    }
+  }
+  .correctwines {
+    display: flex;
+    margin: 0.7666666667rem 0 0.46rem 0;
+    i {
+      margin-right: 5px;
     }
   }
 }

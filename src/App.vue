@@ -7,19 +7,48 @@
       <span>|</span>
       <router-link to="/choisir">Choix</router-link>
     </div>
-    <router-view/>
+    <transition @enter="enter" @leave="leave" appear mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
+<script>
+import { TimelineLite, Power4 } from 'gsap';
+
+export default {
+  name: 'App',
+  methods: {
+    enter(el, done) {
+      const tl = new TimelineLite();
+      tl.fromTo('.container', 0.2, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power4.easeInOut, onComplete: done }, 0);
+    },
+    // =====================================================
+    // LEAVE ANIMATION
+    // =====================================================
+    leave(el, done) {
+      const tl = new TimelineLite();
+      tl.fromTo('.container', 0.2, { autoAlpha: 1 }, { autoAlpha: 0, ease: Power4.easeInOut, onComplete: done }, 0);
+    },
+  },
+};
+</script>
+
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding-bottom: 50px;
-  min-height: 100vh;
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 #nav {
   padding: 30px;

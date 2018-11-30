@@ -2,14 +2,13 @@
   <div class="home container">
     <div class="row">
       <div class="col s12">
-        <h4>Bienvenue,
-          <br>oenologue!
-        </h4>
+        <h4>Bienvenue</h4>
         <div class="row">
           <div class="col s12">
             <img src="/office.gif" alt>
           </div>
         </div>
+        <h4>Master oenologue!</h4>
       </div>
     </div>
   </div>
