@@ -5,4 +5,10 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
+
+  RewriteCond %{HTTP_HOST} !^degustation-vin\.ch$
+  RewriteRule (.*) https://degustation-vin.ch/$1 [L,R=301]
+  # Forcing https
+  RewriteCond %{HTTPS} off
+  RewriteRule .* https://degustation-vin.ch%{REQUEST_URI} [L,R=301]
 </IfModule>
