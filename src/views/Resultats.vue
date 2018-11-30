@@ -132,8 +132,18 @@
               :key="correctindex"
               class="left-align correctwines"
             >
-              <i class="material-icons">check</i>
+              <i class="material-icons">done_all</i>
               {{correctWine}}
+            </div>
+            <div v-if="player[3].length">
+              <div
+                v-for="(halfCorrect, halfCorrectIndex) in player[3]"
+                :key="halfCorrectIndex"
+                class="left-align correctwines"
+              >
+                <i class="material-icons">done</i>
+                {{halfCorrect}}
+              </div>
             </div>
           </div>
           <div v-else class="col s5 left-align">
@@ -212,39 +222,68 @@ export default {
       this.joueurs.forEach(player => {
         player.score = 0;
         player.correct = [];
+        player.halfcorrect = [];
         if (player.vin1 === this.vrais.vin1) {
+          player.score += 2;
+          player.correct.push(`1. ${this.vrais.vin1}`);
+        }
+        if (player.vin1 === this.vrais.vin1_1) {
           player.score += 1;
-          player.correct.push(this.vrais.vin1);
+          player.halfcorrect.push(`1. ${this.vrais.vin1_1}`);
         }
         if (player.vin2 === this.vrais.vin2) {
+          player.score += 2;
+          player.correct.push(`2. ${this.vrais.vin2}`);
+        }
+        if (player.vin2 === this.vrais.vin2_1) {
           player.score += 1;
-          player.correct.push(this.vrais.vin2);
+          player.halfcorrect.push(`2. ${this.vrais.vin2_1}`);
+        }
+        if (player.vin2 === this.vrais.vin2_2) {
+          player.score += 1;
+          player.halfcorrect.push(`2. ${this.vrais.vin2_2}`);
         }
         if (player.vin3 === this.vrais.vin3) {
-          player.score += 1;
-          player.correct.push(this.vrais.vin3);
+          player.score += 2;
+          player.correct.push(`3. ${this.vrais.vin3}`);
         }
         if (player.vin4 === this.vrais.vin4) {
+          player.score += 2;
+          player.correct.push(`4. ${this.vrais.vin4}`);
+        }
+        if (player.vin4 === this.vrais.vin4_1) {
           player.score += 1;
-          player.correct.push(this.vrais.vin4);
+          player.halfcorrect.push(`4. ${this.vrais.vin4_1}`);
+        }
+        if (player.vin4 === this.vrais.vin4_2) {
+          player.score += 1;
+          player.halfcorrect.push(`4. ${this.vrais.vin4_2}`);
         }
         if (player.vin5 === this.vrais.vin5) {
+          player.score += 2;
+          player.correct.push(`5. ${this.vrais.vin5}`);
+        }
+        if (player.vin5 === this.vrais.vin5_1) {
           player.score += 1;
-          player.correct.push(this.vrais.vin5);
+          player.correct.push(`5. ${this.vrais.vin5_1}`);
+        }
+        if (player.vin5 === this.vrais.vin5_2) {
+          player.score += 1;
+          player.correct.push(`5. ${this.vrais.vin5_2}`);
         }
         if (player.vin6 === this.vrais.vin6) {
-          player.score += 1;
-          player.correct.push(this.vrais.vin6);
+          player.score += 2;
+          player.correct.push(`6. ${this.vrais.vin6}`);
         }
         if (player.vin7 === this.vrais.vin7) {
-          player.score += 1;
-          player.correct.push(this.vrais.vin7);
+          player.score += 2;
+          player.correct.push(`7. ${this.vrais.vin7}`);
         }
         if (player.vin8 === this.vrais.vin8) {
-          player.score += 1;
-          player.correct.push(this.vrais.vin8);
+          player.score += 2;
+          player.correct.push(`8. ${this.vrais.vin8}`);
         }
-        points.push([player.nom, player.score, player.correct]);
+        points.push([player.nom, player.score, player.correct, player.halfcorrect]);
       });
       return points.sort(this.comparator);
     },
