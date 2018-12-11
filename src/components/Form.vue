@@ -48,26 +48,41 @@
         </form>
       </div>
       <div v-else class="col s12 left-align">
-        <img class="expert" :src="randomexpert" alt>
-        <div class="citation">
-          <i>« {{randomQuote}} »</i>
+        <div v-if="!finished">
+          <Loading/>
         </div>
-        <div class="citationname right-align">
-          <strong>&nbsp;– {{joueur}}</strong>, oenologue padawan
+        <div v-else class="personal-results">
+          <img class="expert" :src="randomexpert" alt>
+          <div class="citation">
+            <i>« {{randomQuote}} »</i>
+          </div>
+          <div class="citationname right-align">
+            <strong>&nbsp;– {{joueur}}</strong>, oenologue padawan
+          </div>
+          <hr>
+          <br>
+          <h5>Sélection de {{joueur}}</h5>
+          <ul>
+            <li>1. {{vin1}}</li>
+            <li>2. {{vin2}}</li>
+            <li>3. {{vin3}}</li>
+            <li>4. {{vin4}}</li>
+            <li>5. {{vin5}}</li>
+            <li>6. {{vin6}}</li>
+            <li>7. {{vin7}}</li>
+            <li>8. {{vin8}}</li>
+          </ul>
+          <div class="right-align">
+            <button class="btn grey lighten-1 right-align" @click="openmodal()">Restart</button>
+          </div>
+          <sweet-modal ref="resetmodal">
+            <h5>T'es sûr que tu veux tout recommencer?</h5>
+            <div class="restart-buttons">
+              <button class="btn grey accent-3" @click="closemodal()">Non, oublie</button>
+              <button class="btn red" @click="reset()">Oui, je recommence</button>
+            </div>
+          </sweet-modal>
         </div>
-        <hr>
-        <br>
-        <button class="btn">Sélection de {{joueur}}</button>
-        <ul>
-          <li>1. {{vin1}}</li>
-          <li>2. {{vin2}}</li>
-          <li>3. {{vin3}}</li>
-          <li>4. {{vin4}}</li>
-          <li>5. {{vin5}}</li>
-          <li>6. {{vin6}}</li>
-          <li>7. {{vin7}}</li>
-          <li>8. {{vin8}}</li>
-        </ul>
       </div>
     </div>
   </div>
@@ -75,6 +90,8 @@
 <script>
 import store from '@/store';
 import db from '@/firebase/init';
+import Loading from '@/components/Loading.vue';
+import { SweetModal } from 'sweet-modal-vue';
 
 export default {
   name: 'Form',
@@ -137,8 +154,20 @@ export default {
         this.$toasted.show('Formulaire incomplet! Arrête de boire!', { type: 'error', icon: 'warning', position: 'top-center', fullWidth: true });
       }
     },
+    openmodal() {
+      this.$refs.resetmodal.open();
+    },
+    closemodal() {
+      this.$refs.resetmodal.close();
+    },
+    reset() {
+      store.commit('resetState');
+      this.closemodal();
+    },
     showTaunt() {
       const taunts = [
+        'One for me?',
+        'ok',
         "Putain mais t'es mauvais!",
         'Copie pas sur Boris, il capte ked 😂',
         'Dis-voir à Badoux de se la fermer un peu',
@@ -167,6 +196,9 @@ export default {
         "ouai en fait t'en as aucune idée",
         "Attention, celui-là c'est un piège! 👺",
         '👉🏼🚪',
+        'diagnostic?',
+        'que bruto!',
+        'tout à fait!',
         '🤦‍♀️🤦‍♂️',
         'beurré!',
       ];
@@ -221,6 +253,13 @@ export default {
     submitted() {
       return store.state.submitted;
     },
+    finished() {
+      return store.state.finished;
+    },
+  },
+  components: {
+    Loading,
+    SweetModal,
   },
 };
 </script>
@@ -231,5 +270,14 @@ export default {
 }
 .expert {
   max-width: 100%;
+}
+.restart-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  .btn {
+    margin-bottom: 20px;
+  }
 }
 </style>

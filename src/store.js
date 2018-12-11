@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import pinards from './assets/pinards.json';
+import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex);
 
@@ -36,6 +37,7 @@ export default new Vuex.Store({
       vin8: 'Le Syrah de papa Jean',
     },
     submitted: false,
+    finished: false,
   },
   mutations: {
     updateForm(state, form) {
@@ -44,6 +46,23 @@ export default new Vuex.Store({
     submitted(state, payload) {
       this.state.submitted = payload;
     },
+    finished(state, payload) {
+      this.state.finished = payload;
+    },
+    resetState() {
+      this.state.form.joueur = '';
+      this.state.form.vin1 = '';
+      this.state.form.vin2 = '';
+      this.state.form.vin3 = '';
+      this.state.form.vin4 = '';
+      this.state.form.vin5 = '';
+      this.state.form.vin6 = '';
+      this.state.form.vin7 = '';
+      this.state.form.vin8 = '';
+      this.state.submitted = false;
+      this.state.finished = false;
+    },
   },
   actions: {},
+  plugins: [createPersistedState()],
 });
