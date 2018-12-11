@@ -111,7 +111,7 @@
                     ></path>
                   </g>
                 </svg>
-                <h6>{{pinard.cepage}}</h6>
+                <h6 v-html="pinard.cepage"></h6>
               </div>
               <div class="country-wrap">
                 <h6>{{pinard.annee}}</h6>
@@ -145,17 +145,22 @@ export default {
 }
 .liste .card {
   min-height: 350px;
+  .card-content {
+    padding: 0px 24px 24px 24px;
+  }
+  .card-image .activator {
+    padding: 24px;
+  }
 }
 .liste .image-vin {
-  height: 250px;
+  height: 260px;
   display: inline-block;
-  margin: 5px 0;
+  margin: 10px 0 0 0;
   width: auto;
 }
 .flag {
   width: 30px;
-  height: 30px;
-  margin: 0px 10px;
+  margin: 10px;
 }
 .cepage {
   display: flex;
@@ -170,6 +175,7 @@ export default {
   h6 {
     width: calc(100% - 40px);
     margin: 0;
+    line-height: 130%;
   }
 }
 .country-wrap {
@@ -191,10 +197,9 @@ export default {
 .number {
   position: absolute;
   pointer-events: none;
-  top: 10px;
-  left: 10px;
-  font-family: 'Sedgwick Ave', Helvetica, Arial, sans-serif;
-  font-size: 30px;
+  top: 24px;
+  left: 24px;
+  font-size: 35px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
