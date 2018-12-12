@@ -110,6 +110,12 @@ export default {
         "Ce soir chuis tellement CHAUD que j'ai failli boire de l'eau",
         "Bon, j'ai soif, passons à la VP.",
         'Ok',
+        'Choisir ou conduire, il faut boire.',
+        "La sobriété est une hallucination due au manque d'alcool.",
+        'Il y a plus de philosophie dans une bouteille de vin que dans tous les livres.',
+        "La seule arme qui m'intéresse, c'est le tire-bouchon.",
+        "L'alcool est la cause et la solution à tous mes problèmes.",
+        "Mon seul problème avec l'alcool c'est quand j'en renverse.",
       ],
     };
   },
@@ -196,10 +202,12 @@ export default {
         "ouai en fait t'en as aucune idée",
         "Attention, celui-là c'est un piège! 👺",
         '👉🏼🚪',
+        'HAHAHAHAHA',
         'diagnostic?',
         'que bruto!',
         'tout à fait!',
         '🤦‍♀️🤦‍♂️',
+        'beurré!',
         'beurré!',
       ];
       const selectedTaunt = taunts[Math.floor(Math.random() * taunts.length)];
@@ -212,7 +220,7 @@ export default {
   },
   computed: {
     randomexpert() {
-      return `expert-${Math.floor(Math.random() * 7) + 1}.jpg`;
+      return `expert-${Math.floor(Math.random() * 11) + 1}.jpg`;
     },
     pinards() {
       return store.state.pinards;

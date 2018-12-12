@@ -105,6 +105,13 @@
         </button>
       </div>
     </div>
+    <sweet-modal ref="admin" blocking hide-close-button id="admin">
+      <h4>Are you an admin?</h4>
+      <div class="input-field">
+        <input id="pwd" type="text" class="validate" v-model="pwd">
+        <label for="pwd">Password</label>
+      </div>
+    </sweet-modal>
     <sweet-modal ref="modal">
       <ul class="collection">
         <li
@@ -167,6 +174,7 @@ export default {
   name: 'Resultats',
   data() {
     return {
+      pwd: '',
       joueurs: [],
       tabs: [
         { title: 'Vin 1', value: 'tab1' },
@@ -203,6 +211,9 @@ export default {
       });
     });
   },
+  mounted() {
+    this.$refs.admin.open();
+  },
   methods: {
     handleClick(newTab) {
       this.currentTab = newTab;
@@ -214,6 +225,13 @@ export default {
       if (a[1] < b[1]) return 1;
       if (a[1] > b[1]) return -1;
       return 0;
+    },
+  },
+  watch: {
+    pwd: function() {
+      if (this.pwd === 'sionge12') {
+        this.$refs.admin.close();
+      }
     },
   },
   computed: {
@@ -405,5 +423,8 @@ export default {
       margin-right: 5px;
     }
   }
+}
+#admin {
+  background-color: white;
 }
 </style>
