@@ -385,8 +385,7 @@ export default {
     position: absolute;
     top: 5px;
     left: 5px;
-    font-family: 'Sedgwick Ave', Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 21px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
