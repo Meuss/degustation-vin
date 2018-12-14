@@ -283,11 +283,11 @@ export default {
         }
         if (player.vin5 === this.vrais.vin5_1) {
           player.score += 1;
-          player.correct.push(`5. ${this.vrais.vin5_1}`);
+          player.halfcorrect.push(`5. ${this.vrais.vin5_1}`);
         }
         if (player.vin5 === this.vrais.vin5_2) {
           player.score += 1;
-          player.correct.push(`5. ${this.vrais.vin5_2}`);
+          player.halfcorrect.push(`5. ${this.vrais.vin5_2}`);
         }
         if (player.vin6 === this.vrais.vin6) {
           player.score += 2;
@@ -389,6 +389,7 @@ export default {
   }
 }
 .bg {
+  pointer-events: none;
   background-image: url('/redwine.png');
   background-size: cover;
   position: absolute;
