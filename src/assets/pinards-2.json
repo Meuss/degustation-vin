@@ -1,0 +1,121 @@
+[
+  {
+    "id": "1",
+    "name": "Amarone della Valpolicella",
+    "name2": "Vénétie, Italie",
+    "description": "Robe rubis foncé, nez riche en notes de poivre et en arômes typiques de raisins naturellement séchés, avec des nuances de cerises et de mûres en conserve, un amarone frais, ample en bouche et d'un fruité charnu, corps rond et moelleux offrant des tannins soyeux. Une maturation de 24 mois dans de petits fûts lui confère sa structure musclée et son remarquable équilibre.",
+    "cepage": "Rondinella, Molinara, Corvina",
+    "pays": "it",
+    "canton": "Vénétie",
+    "annee": "2015",
+    "img": "/images/amarone.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Cairanne de Xavier Vignon",
+    "name2": "Vallée du Rhône Sud",
+    "description": "Un vin aux arômes envoûtants de lavande, de garrigue et de fleurs sur une grosse charge de fruits noirs en bouche pour un volume généreux et velouté, plaisir immédiat garanti et joli potentiel de garde. Vin riche et frais qui nous procure une sensation de vacances dans le sud de la France.",
+    "cepage": "70% Grenache, 20% Syrah, 10% Mourvèdre",
+    "pays": "fr",
+    "annee": "2015",
+    "img": "/images/xavier.png"
+  },
+  {
+    "id": "3",
+    "name": "Barbera d’Asti DOCG Emilio Vada",
+    "name2": "Piémont, Italie",
+    "description": "La Barbera est plus sur la fraîcheur et l’élégance, jus de mûre sur note de pralin, matière bien enveloppée sur corps svelte, super finale aromatique puissante sur fruits noirs frais. Ce millésime 2017 donne pureté, élégance et définition. D'un pourpre intense, il sent la mûre et le jus de cerise aigre, avec une touche épicée, et déborde de fraîcheur en bouche, \"rayonnante\" de par son acidité véhémente. L'ensemble du résultat est relevé, allégé, et il est pratiquement impossible de résister à la tentation d'un second verre.",
+    "cepage": "Barbera",
+    "pays": "it",
+    "annee": "2017",
+    "img": "/images/barbera.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Cornalin Primus Classicus",
+    "name2": "Valais, Suisse",
+    "description": "Couleur: robe rouge très dense avec des reflets violets intense. Au nez: des senteurs de sous-bois émanent de ce vin délicatement associé à des fragrances de noisettes et de noix, de fruits noirs et d’épices. En bouche: l’attaque est franche et souple, les tannins doux et veloutés s’intègrent harmonieusement dans la structure du vin. Un vin de grande expression aromatique.",
+    "cepage": "Cornalin",
+    "pays": "ch",
+    "canton": "VS",
+    "annee": "2016",
+    "img": "/images/cornalin-primus.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Château Tour des Termes, Saint-Estèphe AOC Cru Bourgeois",
+    "name2": "Bordeaux, France (Saint-Estèphe)",
+    "description": "Une bouteille qui goûte déjà très bien, quelle puissance! Dominé par un gros cassis confit au nez, les sensations attendues en bouche sont au rendez-vous. Superbe volume de fruit et de matière à l'attaque, puis le vin s'étire en longueur et en finesse, loin loin loin...",
+    "cepage": "60% Merlot, 30% Cabernet Sauvignon, 5% Petit Verdot, 5% Cabernet Franc",
+    "pays": "fr",
+    "canton": "Bordeaux",
+    "annee": "2014",
+    "img": "/images/termes.png"
+  },
+  {
+    "id": "6",
+    "name": "L’Instinct du Domaine Jolivet, Saint-Joseph",
+    "name2": "Vallée du Rhône Nord, France",
+    "description": "Remarqué par de prestigieuses Maisons, déjà vendu chez Pic, coup de cœur chez Bocuse, L'Instinct du Domaine Jolivet n'a pas fini de nous surprendre. Splendide expression de la Syrah cultivée au centre de l'appellation Saint-Joseph, élaboré selon les principes de l'agriculture raisonnée, cette cuvée éclatante allie profondeur, équilibre et précision, et offre une structure harmonieuse, fine aux tanins délicats et veloutés. Doté d'un bon potentiel de garde, L'Instinct se dégustera dès aujourd'hui, comme après quelques années de cave. Un vigneron à suivre...",
+    "cepage": "Syrah (appellation Saint-Joseph)",
+    "pays": "fr",
+    "canton": "",
+    "annee": "2016",
+    "img": "/images/st-joseph.png"
+  },
+  {
+    "id": "7",
+    "name": "Antarès Maison Gilliard",
+    "name2": "Valais, Suisse",
+    "description": "L’Antarès est un assemblage original et subtil réalisé au cœur de la cave Gilliard. L’alchimie entre les différents cépages réalisée confère à ce vin rouge une grande puissance, une forte structure ainsi qu’une rare richesse aromatique. Au nez, senteurs de cassis, petits fruits rouges, épices et note vanillée. En bouche, belle ampleur, structure puissante et équilibrée.",
+    "cepage": "Pinot Noir, Syrah, Diolinoir",
+    "pays": "ch",
+    "canton": "VS",
+    "annee": "2016",
+    "img": "/images/antares.png"
+  },
+  {
+    "id": "8",
+    "name": "Montagne Vin",
+    "name2": "Suisse",
+    "description": "Inconnu. Mais il faudra du courage pour le boire (si on le boit).",
+    "cepage": "inconnu",
+    "pays": "ch",
+    "canton": "",
+    "annee": "inconnu",
+    "img": "/images/montagne.png"
+  },
+  {
+    "id": "9",
+    "name": "Melodias Trapiche",
+    "name2": "Mendoza, Argentine",
+    "description": "Robe rouge intense, lueur pourpre. Au nez: intense et typique des prunes, des cerises mûres, fines arômes épicés. En bouche: fruits, tanins veloutés, un grand équilibre, impressions positives et une belle harmonie.",
+    "cepage": "Malbec",
+    "pays": "ar",
+    "canton": "",
+    "annee": "2018",
+    "img": "/images/trapiche.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Beaune Clos de la Chaume Gaufriot",
+    "name2": "Bourgogne, France",
+    "description": "à découvrir.",
+    "cepage": "Pinot noir",
+    "pays": "fr",
+    "canton": "",
+    "annee": "1993",
+    "img": "/images/beaune.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Château La Tour du Pin Figeac, Saint-Emilion Grand Cru",
+    "name2": "Bordeaux, France (Saint-Emilion)",
+    "description": "Trois quarts de merlot pour un quart de cabernet franc, huit mois de cuve et douze de fût pour ce vin à la robe soutenue et brillante, au nez gourmand, fin et frais, sur les fruits rouges et un boisé discrètement réglissé. L'attaque souple et ronde ouvre sur une bouche équilibrée, marquée en finale par des tanins francs. Un vin sincère et « nature ».",
+    "cepage": "Merlot (75%), Cabernet Franc (25%)",
+    "pays": "fr",
+    "canton": "",
+    "annee": "2013",
+    "img": "/images/figeac.jpg"
+  }
+]

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import pinards from './assets/pinards.json';
+import pinards from './assets/pinards-2.json';
 import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex);
@@ -64,5 +64,5 @@ export default new Vuex.Store({
     },
   },
   actions: {},
-  plugins: [createPersistedState()],
+  plugins: [createPersistedState({ key: 'constantin' })],
 });

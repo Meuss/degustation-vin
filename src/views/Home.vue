@@ -4,8 +4,8 @@
       <div class="col s12">
         <h4>Bienvenue</h4>
         <div class="row">
-          <div class="col s12">
-            <img src="/office.gif" alt>
+          <div class="col l2 offset-l5 s6 offset-s3">
+            <img src="/const.jpg" alt>
           </div>
         </div>
         <h4>Master oenologue!</h4>
@@ -24,6 +24,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+img {
+  max-width: 100%;
+  margin: 0 auto;
+}
 h3 {
   margin: 40px 0 0;
 }
