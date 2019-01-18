@@ -427,4 +427,34 @@ export default {
 #admin {
   background-color: white;
 }
+@media (max-width: 700px) {
+  .bg {
+    display: none;
+  }
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+    height: auto;
+    .tabs__item {
+      margin: 0px;
+      &:focus {
+        border-bottom: 2px solid transparent;
+      }
+    }
+    .tabs__active-line {
+      display: none;
+    }
+    .tabs__item_active {
+      background-color: #dfdfdf;
+    }
+  }
+  .resultat .content ul li {
+    span {
+      display: block;
+      padding-left: 10px;
+    }
+  }
+}
 </style>

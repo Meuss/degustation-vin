@@ -38,12 +38,12 @@ export default {
   data() {
     return {
       texts: [
-        { text: 'Connexion au serveur', showing: false, done: false },
-        { text: 'Compressions des données', showing: false, done: false },
+        { text: 'Compression des données', showing: false, done: false },
+        { text: 'SMS à Véronique pour un diagnostic', showing: false, done: false },
         { text: 'Envoi des résultats à la mère à Matteo', showing: false, done: false },
-        { text: 'Préparation de la publication sur ton profil facebook', showing: false, done: false },
+        { text: 'Publication sur facebook', showing: false, done: false },
         { text: 'Comparaison des résultats', showing: false, done: false },
-        { text: "Omg t'as fait tout faux", showing: false, done: false },
+        { text: 'Aucune réponse juste', showing: false, done: false },
       ],
     };
   },

@@ -64,5 +64,5 @@ export default new Vuex.Store({
     },
   },
   actions: {},
-  plugins: [createPersistedState({ key: 'constantin' })],
+  plugins: [createPersistedState({ key: 'constant' })],
 });
