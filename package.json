@@ -11,7 +11,7 @@
     "firebase": "^9.14.0",
     "gsap": "^3.6.0",
     "sweet-modal-vue": "^2.0.0",
-    "vue": "^2.5.17",
+    "vue": "^3.0.0",
     "vue-router": "^3.0.1",
     "vue-scroll-reveal": "^1.0.11",
     "vue-tabs-with-active-line": "^1.1.4",
